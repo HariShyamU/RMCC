@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="navgationDiv">
+      <nav class="navigationBar">
+            <img src="../../assets/media/logo.png">
+            <div id="nav" class="navLinks">
+                <span id="homeNav" class="homeActive"> <a href=""><h3>Home</h3></a> </span>
+                <!-- <span id="serviceNav" class="dropdown"> <a class="dropbtn"><h3 style="position: relative; bottom:3.2vh;">Services</h3></a>
+                    <div class="dropdown-content">
+                        <a>Aging Inventory</a>
+                        <a>Marketplace</a>
+                        <a>Machines & Equipment</a>
+                        <a>Global Partners</a>
+                        <a>Expo</a>
+                        <a>Marketing services</a>
+                    </div>
+                </span> -->
+                <span> <a href="/careers"><h3>Careers</h3></a> </span>
+                <span> <a href=""><h3>About Us</h3></a> </span>
+                <span> <a><h3>Contact Us</h3></a> </span>
+                <span id="loginBtn"> <a><h3>Log In</h3></a> </span>
+                <span> <a href="/signup"> <button class="subbutt"><p> Subscribe </p></button> </a>  </span>
+            </div>
+        </nav>
+    </div>
+    <div class="registerContent">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                    <form id="signInForm">
+                        <h3 style="margin-bottom: 2vh;padding-top: 4vh ">Sign Up</h3>
+                        <dl style="height: 45vh; ">
+                            <dt style="display:inline-block; width:20vw;">Student's Name</dt> <dd><input id="username" type="text" name="CompIn" value=""/></p></dd> <br>
+
+                            <dt style="display:inline-block; width:20vw;">School</dt> <dd><input id="name" name="nameIn" type="text" value=""/></p></dd> </p> <br>
+
+                            <dt style="display:inline-block; width:20vw;">Date Of Birth</dt> <dd style="display:inline"><input id="pass" type="password" name="PwIn" value=""/></dd> <br>
+
+                            <dt style="display:inline-block; width:20vw;">  <br>Email ID</dt> <dd>  <br> <input id="email" type="email" name="emailIn" value=""/></dd> <br>
+
+                            <dt style="display:inline-block; width:20vw;">Phone Number</dt> <dd><input id="phone" name="phoneIn" type="text" value=""/></dd> <br>
+                        </dl>
+                        <div style="width:50vw; display: block;">
+
+                            <p style="color:red" id="error_msg_signup1"></p>
+                            <p style="color:red" id="error_msg_signup2"></p>
+                            <p style="color:red" id="error_msg_signup3"></p>
+                            <!-- <p style="color:red" id="error_msg_signup4"></p> -->
+
+                        </div>
+                    </form>
+                    <button style="position: relative; left:50%; transform: translateX(-50%);" class="formbutt" onclick="carryFormData()" id="subbutton">Sign Up</button> <br>
+                    <a href="/signin" style="position: relative; left:42%; transform: translateX(-50%);font-size:0.7vw; text-decoration: none;"> I already have an account.</a>
+
+            </div>
+            <div class="swiper-slide">
+              <div style="text-align:center; margin-top:30vh;" class="">
+                <p>Payment API goes here.</p> <br> <br>
+              </div>
+                <button style="position: relative; left:50%; transform: translateX(-50%);" class="formbutt" onclick="goHome()">Confirm</button>
+            </div>
+            <div class="swiper-slide">
+              <form style="margin-top:20vh;" id="transferForm">
+                  <dt style="width:20vw; margin-top: 3vh; margin-bottom: 3vh;">Company Address</dt> <dd><textarea style=" margin-top: 3vh; margin-bottom: 3vh; height: 10vh; width: 25vw;" id="address" name="AddrIn">Please enter your company's address here.</textarea></dd> <br>
+              </form>
+
+              <button style="display:inline-block;" onclick="register()">Confirm</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="modals">
+      <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span id="loginClose" class="close">&times;</span>
+              <form style=" height: 30vh;" id="loginForm">
+                <h3 style="text-align:center; margin-top: 4vh; margin-bottom:6vh;">Login</h3>
+                <div style="" class="formParent">
+                  <div class="formElement">
+                    <div style="display:inline-block; width:45%;">
+                      <p style="text-align:center; ">Username:</p>
+                    </div>  <input style="width:45%;" type="text" name="" value="">
+                  </div>
+                  <div class="formElement">
+                    <div style="display:inline-block; width:45%;">
+                      <p style="text-align:center;">Password:</p>
+                    </div>  <input style="width:45%;" type="text" name="" value="">
+                  </div>
+                </div>
+              </form>
+              <button style="position: relative; left:50%; transform: translateX(-50%);" class="subbuttdash" type="button" onclick="ConsumerEdit();">Submit</button>
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    <script>
+
+      var loginModal = document.getElementById('loginModal');
+
+      var loginBtn = document.getElementById("loginBtn");
+
+      var loginClose = document.getElementById("loginClose");
+
+      loginBtn.onclick = function() {
+          loginModal.style.display = "flex";
+      }
+      loginClose.onclick = function() {
+          loginModal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
