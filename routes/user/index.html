@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </head>
+  <body>
+    <div class="navgationDiv">
+      <nav class="navigationBar">
+            <img src="../../assets/media/logo.png">
+            <div id="nav" class="navLinks">
+                <span id="homeNav" class="homeActive"> <a href="/"><h3>Home</h3></a> </span>
+                <!-- <span id="serviceNav" class="dropdown"> <a class="dropbtn"><h3 style="position: relative; bottom:3.2vh;">Services</h3></a>
+                    <div class="dropdown-content">
+                        <a>Aging Inventory</a>
+                        <a>Marketplace</a>
+                        <a>Machines & Equipment</a>
+                        <a>Global Partners</a>
+                        <a>Expo</a>
+                        <a>Marketing services</a>
+                    </div>
+                </span> -->
+                <span> <a href=""><h3>Careers</h3></a> </span>
+                <span> <a href=""><h3>About Us</h3></a> </span>
+                <span> <a><h3>Contact Us</h3></a> </span>
+                <span id="loginBtn"> <a><h3>Log In</h3></a> </span>
+                <span> <a href="/signup"> <button class="subbutt"><p> Subscribe </p></button> </a>  </span>
+            </div>
+        </nav>
+    </div>
+    <div class="homeContent">
+
+    </div>
+    <div class="modals">
+      <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span id="loginClose" class="close">&times;</span>
+              <form style=" height: 30vh;" id="loginForm">
+                <h3 style="text-align:center; margin-top: 4vh; margin-bottom:6vh;">Login</h3>
+                <div style="" class="formParent">
+                  <div class="formElement">
+                    <div style="display:inline-block; width:45%;">
+                      <p style="text-align:center; ">Username:</p>
+                    </div>  <input style="width:45%;" type="text" name="" value="">
+                  </div>
+                  <div class="formElement">
+                    <div style="display:inline-block; width:45%;">
+                      <p style="text-align:center;">Password:</p>
+                    </div>  <input style="width:45%;" type="text" name="" value="">
+                  </div>
+                </div>
+              </form>
+              <button style="position: relative; left:50%; transform: translateX(-50%);" class="subbuttdash" type="button" onclick="ConsumerEdit();">Submit</button>
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    <script>
+
+      var loginModal = document.getElementById('loginModal');
+
+      var loginBtn = document.getElementById("loginBtn");
+
+      var loginClose = document.getElementById("loginClose");
+
+      loginBtn.onclick = function() {
+          loginModal.style.display = "flex";
+      }
+      loginClose.onclick = function() {
+          loginModal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

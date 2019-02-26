@@ -159,45 +159,85 @@ app.post('/auth',   function (req, res) {
 
 });
 
-app.post('/register', upload.array(),   function (req, res) {
+app.post('/registerstudent', upload.array(),   function (req, res) {
 
     request = {
-        uname: req.body.CompIn,
-        pass: req.body.PwIn,
-        email: req.body.emailIn,
-        name: req.body.nameIn,
-        phone: req.body.phoneIn,
-        address: req.body.AddrIn,
-        country: req.body.countIn
+        name: req.body.name,
+        email: req.body.email,
+        school: req.body.school,
+        phone: req.body.phone,
+        dob: req.body.dob,
+        grade: req.body.grade
     };
 
     var pool = new pg.Pool(config);
 
-    pool.query('INSERT INTO users (userid, company, password, authid, name, email, phone, address, country) VALUES ($1,$2,$3,1,$4,$5,$6,$7,$8)',
-        [uniqid(), request.uname, request.pass, request.name, request.email, request.phone, request.address, request.country], function (err, result) {
-            if (err) {
-                console.log(err);
-                // res.sendStatus(err);
-                res.send(err);
-            }
-            // else if (JSON.stringify(result.rows)=="[]") {
-            //   var obj = '{ "error":"Incorrect credentials" }';
-            //   console.log(JSON.parse(obj));
-            //   res.send(obj);
-            //   console.log(request);
-            //   console.log(request.pass);
-            // }
-            else {
-                // test =result.rows;
-                // cuid=parseInt(test[0].id);
-                // cauth=parseInt(test[0].authid);
-                // cwid=parseInt(test[0].wid);
-                // console.log(test);
-                res.redirect('/signin');
+    let userid = uniqid();
 
+    pool.query('INSERT INTO users (userid, name, school, phone, grade, email, dob) VALUES ($1,$2,$3,1,$4,$5,$6,$7)',
+    [userid, request.name, request.school, request.phone, request.grade, request.email, request.dob], function (err, result) {
+        if (err) {
+            console.log(err);
+            // res.sendStatus(err);
+            res.send(err);
+        }
+        else {                
+            res.send(userid);
+        }
+    });
+});
 
-            }
-        });
+app.post('/registerparent', upload.array(),   function (req, res) {
+
+    request = {
+        userid: req.body.userid,
+        name: req.body.name,
+        email: req.body.email,
+        school: req.body.school,
+        phone: req.body.phone,
+        dob: req.body.dob,
+        grade: req.body.grade
+    };
+
+    var pool = new pg.Pool(config);
+
+    pool.query('INSERT INTO parents (userid, fname, mname, fjob, mjob, email, phone) VALUES ($1,$2,$3,1,$4,$5,$6,$7)',
+    [request.userid, request.fname, request.mname, request.fjob, request.mjob, request.email, request.phone], function (err, result) {
+        if (err) {
+            console.log(err);
+            // res.sendStatus(err);
+            res.send(err);
+        }
+        else {                
+            res.send(true);
+        }
+    });
+});
+
+app.post('/updateuser', upload.array(),   function (req, res) {
+
+    request = {
+        userid: req.body.userid,
+        address1: req.body.address1,
+        address2: req.body.address2,
+        address3: req.body.address3,
+        password: req.body.password,
+        batch: req.body.batch,
+    };
+
+    var pool = new pg.Pool(config);
+
+    pool.query('UPDATE user SET address1=$1, address2=$2, address3=$3, password=$4, batch=$5 WHERE userid=$6',
+    [request.address1, request.address2, request.address3, request.password, request.batch, request.userid, request.phone], function (err, result) {
+        if (err) {
+            console.log(err);
+            // res.sendStatus(err);
+            res.send(err);
+        }
+        else {                
+            res.send(true);
+        }
+    });
 });
 
 app.get('/logout',   function (req, res) {
