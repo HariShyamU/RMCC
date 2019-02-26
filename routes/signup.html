@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
     <link rel="stylesheet" href="../css/swiper.min.css">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
@@ -34,81 +33,245 @@
         </nav>
     </div>
     <div class="signupContent">
-      <div class="swiper-container registerModule">
+      <div class="swiper-container registerModule mdc-elevation--z4">
         <div class="swiper-wrapper">
           <div class="swiper-slide"> 
-            <form action="">
-              <div style="" class="formParent">
-                <h3 style="text-align:center; margin-top: 4vh; margin-bottom:6vh;">Student's Details</h3>
+              <h3 style="text-align:center; margin-top: 4vh; margin-bottom:4vh;">Student's Details</h3>
+              <form action="">
+              <div style="width: 40vw;" class="formParent">
                 <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center; ">Name:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
+                  <div style="float: left;" class="text-field-container">
+                    <div class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style="top:30%;">Student's Name</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
+                  <div style="float: right;" class="text-field-container">
+                    <div style="float:right;" class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Date Of Birth</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
                 </div>
                 <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center;">Date Of Birth:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
+                  <div class="fulltext-field-container">
+                    <div class="mdc-text-field text-field mdc-text-field--outlined fullTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">School</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
                 </div>
                 <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center;">School:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
+                  <div style="float: left;" class="text-field-container">
+                    <div class="mdc-text-field text-field mdc-text-field--outlined smallTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Grade</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
+                  <div style="float:right;" class="text-field-container">
+                    <div style="float:right;" class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Phone No.</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
                 </div>
                 <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center;">Grade:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
-                </div>
-                <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center;">Phone Number:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
-                </div>
-                <div class="formElement">
-                  <div style="display:inline-block; width:45%;">
-                    <p style="text-align:center;">e-Mail ID:</p>
-                  </div>  <input style="width:45%;" type="text" name="" value="">
+                  <div class="fulltext-field-container">
+                    <div class="mdc-text-field text-field mdc-text-field--outlined fullTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">e-mail ID</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>                    
                 </div>
               </div>
             </form>
-            <button style="position: relative; left:50%; transform: translateX(-50%);" class="subbuttdash" type="button" onclick="registerStudent();">Submit</button>
+            <div class="mdc-button--raised defaultButton">
+              <button style="position: relative; left:50%; transform: translateX(-50%);" class="mdc-button" type="button" onclick="registerStudent();"><span class="mdc-button__label"><h4>Next</h4></span></button>
+            </div>
           </div>
           <div class="swiper-slide"> 
             <h3 style="text-align:center; margin-top: 4vh; margin-bottom:6vh;">Parent's Details</h3>
+            <div style="width:40vw;" class="formParent">
+              <div class="formElement">
+                <div style="float: left;" class="text-field-container">
+                  <div class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                    <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                    <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch" style="">
+                        <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Father's Name</label>
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="mdc-text-field-helper-line">
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                  </div> -->
+                </div>
+                <div style="float:right;" class="text-field-container">
+                  <div style="float:right;" class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                    <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                    <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch" style="">
+                        <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Father's Occupation</label>
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="mdc-text-field-helper-line">
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                  </div> -->
+                </div>
+              </div>
+              <div class="formElement">
+                <div style="float: left;" class="text-field-container">
+                  <div class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                    <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                    <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch" style="">
+                        <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Mother's Name</label>
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="mdc-text-field-helper-line">
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                  </div> -->
+                </div>
+                <div style="float:right;" class="text-field-container">
+                  <div style="float:right;" class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                    <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                    <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch" style="">
+                        <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Mother's Occupation</label>
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="mdc-text-field-helper-line">
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                  </div> -->
+                </div>
+              </div>
+              <div class="formElement">
+                  <div style="float: left;" class="text-field-container">
+                    <div class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">Phone No.</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
+                  <div style="float:right;" class="text-field-container">
+                    <div style="float:right;" class="mdc-text-field text-field mdc-text-field--outlined defaultTextField" data-mdc-auto-init="MDCTextField">
+                      <input type="text" id="text-field-outlined" class="mdc-text-field__input">
+                      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch" style="">
+                          <label class="mdc-floating-label" for="text-field-outlined" style=" top:30%">e-mail ID</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                      </div>
+                    </div>
+                    <!-- <div class="mdc-text-field-helper-line">
+                      <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="pw-validation-msg">Helper Text</p>
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+            <div class="mdc-button--raised defaultButton">
+              <button style="position: relative; left:50%; transform: translateX(-50%);" class="mdc-button" type="button" onclick="registerParents();"><span class="mdc-button__label"><h4>Next</h4></span></button>
+            </div>
+          </div>
+          <div class="swiper-slide"> 
+            <h3 style="text-align:center; margin-top: 4vh; margin-bottom:6vh;">Third Form</h3>
             <div style="" class="formParent">
               <div class="formElement">
                 <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center; ">Father's Name:</p>
+                  <p style="text-align:center; ">Address Line 1:</p>
                 </div>  <input style="width:45%;" type="text" name="" value="">
               </div>
               <div class="formElement">
                 <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center;">Father's Occupation:</p>
+                  <p style="text-align:center;">Address Line 2:</p>
                 </div>  <input style="width:45%;" type="text" name="" value="">
               </div>
               <div class="formElement">
                 <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center;">Mother's Name:</p>
+                  <p style="text-align:center;">Address Line 3:</p>
                 </div>  <input style="width:45%;" type="text" name="" value="">
               </div>
               <div class="formElement">
                 <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center;">Mother's Occupation:</p>
-                </div>  <input style="width:45%;" type="text" name="" value="">
-              </div>
-              <div class="formElement">
-                <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center;">Phone Number:</p>
-                </div>  <input style="width:45%;" type="text" name="" value="">
-              </div>
-              <div class="formElement">
-                <div style="display:inline-block; width:45%;">
-                  <p style="text-align:center;">e-Mail ID:</p>
+                  <p style="text-align:center;">Select your Batch:</p>
                 </div>  <input style="width:45%;" type="text" name="" value="">
               </div>
             </div>
-            <button style="position: relative; left:50%; transform: translateX(-50%);" class="subbuttdash" type="button" onclick="registerStudent();">Submit</button>
+            <button style="position: relative; left:50%; transform: translateX(-50%);" class="mdc-button" type="button" onclick="registerStudent();">Submit</button>
           </div>
           </div>
       </div>
@@ -141,6 +304,7 @@
     </div>
 
     <script src="../js/swiper.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
     <script>
 
@@ -160,6 +324,11 @@
         direction: 'horizontal',
         simulateTouch: false,
         })
+
+        window.mdc.autoInit();
+
+        // mdc.textField.MDCTextField.attachTo(document.querySelectorAll('.mdc-text-field'));
+
       }
 
       var registerStudent = () => {
@@ -177,6 +346,25 @@
 
         // ajaxReq.send(oData);
               registerCarousel.slideTo(1, 1000);
+
+        
+      }
+
+      var registerParents = () => {
+        // let formData = document.getElementById("registerStudentForm");
+
+        // var ajaxReq = new XMLHttpRequest();
+        // ajaxReq.open("POST", SERVER_IP_ADDR + "/sellinv", true);
+        // ajaxReq.onload = function(oEvent) {
+        //     if (ajaxReq.status == 200) {
+        //       registerCarousel.slideTo(1, 1000);
+        //     } else {
+        //         alert("Error " + ajaxReq.status + " occurred when trying to upload your data.");
+        //     }
+        // };
+
+        // ajaxReq.send(oData);
+              registerCarousel.slideTo(2, 1000);
 
         
       }
